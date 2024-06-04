@@ -27,40 +27,33 @@ class ContactController {
 
     @GetMapping
     fun index(): List<Contact> {
-        return repository.findAll()
+        return service.listAllContacts()
     }
 
     //Do a POST type request at API endpoint
     @PostMapping
     fun create(@RequestBody contact: Contact ): Contact {
-        return service.addContact(contact) // salva no repositório
+        return service.addContact(contact)
     }
 
     //Do a GET type request at API endpoint
     @GetMapping("/{id}") //Query parameter
     //Getting query parameter through @PathVariable and body JSON through @RequestBody
     fun show(@PathVariable("id") id : Long): Contact {
-        return repository.findById(id).orElseThrow {EntityNotFoundException()}
+        //return repository.findById(id).orElseThrow {EntityNotFoundException()}
+        return service.showContact(id)
     }
 
 
     //Do a PUT type request at API endpoint
     @PutMapping("/{id}")
     fun update(@PathVariable("id") id: Long, @RequestBody newContact: Contact) : Contact{
-        val contact = repository.findById(id).orElseThrow {EntityNotFoundException()}
-
-        contact.apply {
-            this.name = newContact.name
-            this.email = newContact.email
-            this.phone_number = newContact.phone_number
-        }
-        return  service.addContact(contact)
+       return service.alterContact(id, newContact)
     }
 
     //Do a DELETE type request at API endpoint
     @DeleteMapping("/{id}")
     fun delete(@PathVariable("id") id: Long) {
-        val contact = repository.findById(id).orElseThrow {EntityNotFoundException()}
-        repository.delete(contact)
+       service.deleteContact(id)
     }
 }

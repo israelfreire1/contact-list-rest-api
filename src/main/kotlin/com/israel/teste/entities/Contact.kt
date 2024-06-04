@@ -1,8 +1,8 @@
 package com.israel.teste.entities
 
+import lombok.AllArgsConstructor
+import lombok.Data
 import javax.persistence.*
-
-
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
@@ -10,8 +10,10 @@ import javax.validation.constraints.Size
 
 
 @Entity
+@Data
+@AllArgsConstructor
 @Table(name = "contacts")
- class Contact (
+ data class Contact (
 
     @field:Id
     @field:GeneratedValue(strategy = GenerationType.IDENTITY)
