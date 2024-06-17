@@ -6,10 +6,12 @@ import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
 import org.springframework.web.server.ResponseStatusException
 import javax.persistence.EntityNotFoundException
+import kotlin.contracts.contract
 
 @Service
 class ContactService(private val repository: ContactRepository)  {
-     private fun verifyContact(contact: Contact){
+
+    fun verifyContact(contact: Contact){
       if(repository.existsByNameAndEmail(contact.name, contact.email) ||
           repository.existsByName(contact.name) ||
           repository.existsByEmail(contact.email)){

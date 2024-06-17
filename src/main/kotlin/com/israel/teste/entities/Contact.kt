@@ -8,17 +8,15 @@ import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
 
 
-
 @Entity
 @Data
 @AllArgsConstructor
 @Table(name = "contacts")
- data class Contact (
+ data class Contact(
 
     @field:Id
     @field:GeneratedValue(strategy = GenerationType.IDENTITY)
-     val id: Long,
-
+    var id: Long,
 
     @field:NotNull
     @field:Size(min = 5, max = 50)
@@ -27,7 +25,6 @@ import javax.validation.constraints.Size
     @field:NotNull
     @field:Email
     var email: String,
-
 
     @NotNull
     @field:Size(max = 11)

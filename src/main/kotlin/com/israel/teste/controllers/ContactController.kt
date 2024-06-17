@@ -44,7 +44,6 @@ class ContactController {
         return service.showContact(id)
     }
 
-
     //Do a PUT type request at API endpoint
     @PutMapping("/{id}")
     fun update(@PathVariable("id") id: Long, @RequestBody newContact: Contact) : Contact{
