@@ -1,0 +1,3 @@
+ë11:59:04.976 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactRepository name=contactRepository#1
+è11:59:05.781 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for List name=child of contactRepository#1#2
+Æ11:59:05.784 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering [Contact(id=1, name=Israel, email=israel@gmail.com, phone_number=77981460173), Contact(id=2, name=Jos√©, email=zdelivery@gmail.com, phone_number=77981460176)] on ContactRepository(contactRepository#1).findAll()
