@@ -1,3 +1,22 @@
-ã09:48:56.510 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactService name=contactService#1
-ã09:48:56.785 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactService name=contactService#2
-ã09:48:56.787 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactService name=contactService#3
+ë10:32:59.454 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactRepository name=contactRepository#1
+í10:33:00.119 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Contact name=child of contactRepository#1#2
+ª10:33:00.121 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering false on ContactRepository(contactRepository#1).existsByNameAndEmail(Israel, isantos@gmail.com)
+†10:33:00.122 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering false on ContactRepository(contactRepository#1).existsByName(Israel)
+¨10:33:00.122 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering false on ContactRepository(contactRepository#1).existsByEmail(isantos@gmail.com)
+ß10:33:00.122 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering Contact(id=1, name=Israel, email=isantos@gmail.com, phone_number=77981460173) on ContactRepository(contactRepository#1).save(Contact(id=1, name=Israel, email=isantos@gmail.com, phone_number=77981460173))
+ë10:33:00.127 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactRepository name=contactRepository#3
+ì10:33:00.168 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Optional name=child of contactRepository#3#4
+í10:33:00.170 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Contact name=child of contactRepository#3#5
+10:33:00.171 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering Optional[Contact(id=1, name=Israel Santos, email=isantos@gmail.com, phone_number=77981460173)] on ContactRepository(contactRepository#3).findById(1)
+π10:33:00.172 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering Contact(id=1, name=Israel Santana, email=isantos1@gmail.com, phone_number=77981460173) on ContactRepository(contactRepository#3).save(Contact(id=1, name=Israel Santana, email=isantos1@gmail.com, phone_number=77981460173))
+ë10:33:00.173 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactRepository name=contactRepository#6
+ì10:33:00.174 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Optional name=child of contactRepository#6#7
+è10:33:00.191 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Unit name=child of contactRepository#6#8
+10:33:00.193 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering Optional[Contact(id=1, name=Israel Santos, email=isantos@gmail.com, phone_number=77981460173)] on ContactRepository(contactRepository#6).findById(1)
+Ó10:33:00.194 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering kotlin.Unit on ContactRepository(contactRepository#6).delete(Contact(id=1, name=Israel Santos, email=isantos@gmail.com, phone_number=77981460173))
+ë10:33:00.206 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactRepository name=contactRepository#9
+î10:33:00.207 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Optional name=child of contactRepository#9#10
+10:33:00.208 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering Optional[Contact(id=1, name=Israel Santos, email=isantos@gmail.com, phone_number=77981460173)] on ContactRepository(contactRepository#9).findById(1)
+í10:33:00.208 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactRepository name=contactRepository#11
+ë10:33:00.310 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for List name=child of contactRepository#11#12
+Ø10:33:00.311 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering [Contact(id=1, name=Israel, email=israel@gmail.com, phone_number=77981460173), Contact(id=2, name=Jos√©, email=zdelivery@gmail.com, phone_number=77981460176)] on ContactRepository(contactRepository#11).findAll()

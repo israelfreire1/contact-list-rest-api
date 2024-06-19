@@ -1,171 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.israel.teste.services.ContactServiceTest" tests="3" skipped="0" failures="3" errors="0" timestamp="2024-06-19T12:48:55" hostname="ni-24019-8p" time="1.109">
+<testsuite name="com.israel.teste.services.ContactServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-06-19T13:32:58" hostname="ni-14033-0p" time="1.494">
   <properties/>
-  <testcase name="verifyContact" classname="com.israel.teste.services.ContactServiceTest" time="1.104">
-    <failure message="io.mockk.MockKException: No matching constructors found:&#10;" type="io.mockk.MockKException">io.mockk.MockKException: No matching constructors found:
-
-	at app//io.mockk.impl.annotations.MockInjector.constructorInjection(MockInjector.kt:20)
-	at app//io.mockk.impl.annotations.JvmMockInitializer.doInjection(JvmMockInitializer.kt:91)
-	at app//io.mockk.impl.annotations.JvmMockInitializer.initMock(JvmMockInitializer.kt:68)
-	at app//io.mockk.impl.annotations.JvmMockInitializer.initAnnotatedMocks(JvmMockInitializer.kt:24)
-	at app//com.israel.teste.services.ContactServiceTest.setup(ContactServiceTest.kt:178)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.23/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.23/java.lang.reflect.Method.invoke(Method.java:566)
-	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at app//org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
-	at app//org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at app//org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at app//org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.23/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.23/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</failure>
-  </testcase>
-  <testcase name="add contact in database trough of repository" classname="com.israel.teste.services.ContactServiceTest" time="0.002">
-    <failure message="io.mockk.MockKException: No matching constructors found:&#10;" type="io.mockk.MockKException">io.mockk.MockKException: No matching constructors found:
-
-	at app//io.mockk.impl.annotations.MockInjector.constructorInjection(MockInjector.kt:20)
-	at app//io.mockk.impl.annotations.JvmMockInitializer.doInjection(JvmMockInitializer.kt:91)
-	at app//io.mockk.impl.annotations.JvmMockInitializer.initMock(JvmMockInitializer.kt:68)
-	at app//io.mockk.impl.annotations.JvmMockInitializer.initAnnotatedMocks(JvmMockInitializer.kt:24)
-	at app//com.israel.teste.services.ContactServiceTest.setup(ContactServiceTest.kt:178)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.23/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.23/java.lang.reflect.Method.invoke(Method.java:566)
-	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at app//org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
-	at app//org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at app//org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at app//org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.23/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.23/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</failure>
-  </testcase>
-  <testcase name="listAllContacts" classname="com.israel.teste.services.ContactServiceTest" time="0.002">
-    <failure message="io.mockk.MockKException: No matching constructors found:&#10;" type="io.mockk.MockKException">io.mockk.MockKException: No matching constructors found:
-
-	at app//io.mockk.impl.annotations.MockInjector.constructorInjection(MockInjector.kt:20)
-	at app//io.mockk.impl.annotations.JvmMockInitializer.doInjection(JvmMockInitializer.kt:91)
-	at app//io.mockk.impl.annotations.JvmMockInitializer.initMock(JvmMockInitializer.kt:68)
-	at app//io.mockk.impl.annotations.JvmMockInitializer.initAnnotatedMocks(JvmMockInitializer.kt:24)
-	at app//com.israel.teste.services.ContactServiceTest.setup(ContactServiceTest.kt:178)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.23/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.23/java.lang.reflect.Method.invoke(Method.java:566)
-	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at app//org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
-	at app//org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at app//org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at app//org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.23/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.23/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.23/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</failure>
-  </testcase>
-  <system-out><![CDATA[09:48:56.510 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactService name=contactService#1
-09:48:56.785 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactService name=contactService#2
-09:48:56.787 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactService name=contactService#3
+  <testcase name="addContact" classname="com.israel.teste.services.ContactServiceTest" time="1.308"/>
+  <testcase name="alterContact" classname="com.israel.teste.services.ContactServiceTest" time="0.046"/>
+  <testcase name="deleteContact" classname="com.israel.teste.services.ContactServiceTest" time="0.032"/>
+  <testcase name="showContact" classname="com.israel.teste.services.ContactServiceTest" time="0.002"/>
+  <testcase name="listAllContacts" classname="com.israel.teste.services.ContactServiceTest" time="0.104"/>
+  <system-out><![CDATA[10:32:59.454 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactRepository name=contactRepository#1
+10:33:00.119 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Contact name=child of contactRepository#1#2
+10:33:00.121 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering false on ContactRepository(contactRepository#1).existsByNameAndEmail(Israel, isantos@gmail.com)
+10:33:00.122 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering false on ContactRepository(contactRepository#1).existsByName(Israel)
+10:33:00.122 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering false on ContactRepository(contactRepository#1).existsByEmail(isantos@gmail.com)
+10:33:00.122 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering Contact(id=1, name=Israel, email=isantos@gmail.com, phone_number=77981460173) on ContactRepository(contactRepository#1).save(Contact(id=1, name=Israel, email=isantos@gmail.com, phone_number=77981460173))
+10:33:00.127 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactRepository name=contactRepository#3
+10:33:00.168 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Optional name=child of contactRepository#3#4
+10:33:00.170 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Contact name=child of contactRepository#3#5
+10:33:00.171 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering Optional[Contact(id=1, name=Israel Santos, email=isantos@gmail.com, phone_number=77981460173)] on ContactRepository(contactRepository#3).findById(1)
+10:33:00.172 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering Contact(id=1, name=Israel Santana, email=isantos1@gmail.com, phone_number=77981460173) on ContactRepository(contactRepository#3).save(Contact(id=1, name=Israel Santana, email=isantos1@gmail.com, phone_number=77981460173))
+10:33:00.173 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactRepository name=contactRepository#6
+10:33:00.174 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Optional name=child of contactRepository#6#7
+10:33:00.191 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Unit name=child of contactRepository#6#8
+10:33:00.193 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering Optional[Contact(id=1, name=Israel Santos, email=isantos@gmail.com, phone_number=77981460173)] on ContactRepository(contactRepository#6).findById(1)
+10:33:00.194 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering kotlin.Unit on ContactRepository(contactRepository#6).delete(Contact(id=1, name=Israel Santos, email=isantos@gmail.com, phone_number=77981460173))
+10:33:00.206 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactRepository name=contactRepository#9
+10:33:00.207 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Optional name=child of contactRepository#9#10
+10:33:00.208 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering Optional[Contact(id=1, name=Israel Santos, email=isantos@gmail.com, phone_number=77981460173)] on ContactRepository(contactRepository#9).findById(1)
+10:33:00.208 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for ContactRepository name=contactRepository#11
+10:33:00.310 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for List name=child of contactRepository#11#12
+10:33:00.311 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering [Contact(id=1, name=Israel, email=israel@gmail.com, phone_number=77981460173), Contact(id=2, name=José, email=zdelivery@gmail.com, phone_number=77981460176)] on ContactRepository(contactRepository#11).findAll()
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
