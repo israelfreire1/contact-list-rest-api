@@ -10,3 +10,24 @@ spring:
     h2:
         console: true
         path: "/h2-console"
+
+    output:
+    ansi:
+        enabled: DETECT
+
+
+
+logging:
+    file.name: logs/logs-contact-list-application.log
+
+    pattern:
+        console: "%d{yyyy-mm-dd  HH:mm} %-5level  ---  [ %logger{40} ] : %msg%n"
+
+    level:
+        root: TRACE
+        org.springframework.web: TRACE
+        org.hibernate: TRACE
+
+
+
+

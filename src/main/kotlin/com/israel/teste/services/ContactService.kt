@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
 import org.springframework.web.server.ResponseStatusException
 import javax.persistence.EntityNotFoundException
-import kotlin.contracts.contract
 
 @Service
 class ContactService(private val repository: ContactRepository)  {
@@ -47,6 +46,6 @@ class ContactService(private val repository: ContactRepository)  {
         val contact = repository.findById(id).orElseThrow {EntityNotFoundException()}
         repository.delete(contact)
 
-        throw ResponseStatusException(HttpStatus.OK, "The contact was deleted")
+       throw ResponseStatusException(HttpStatus.OK, "The contact was deleted")
     }
 }

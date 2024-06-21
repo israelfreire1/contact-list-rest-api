@@ -11,7 +11,7 @@ import org.junit.Test
 import org.springframework.http.HttpStatus
 import org.springframework.web.server.ResponseStatusException
 import java.util.*
-import kotlin.test.assertEquals
+import kotlin.test.*
 
 @Tag("uni test")
 class ContactServiceTest {
@@ -63,11 +63,9 @@ class ContactServiceTest {
             Contact(2L, "José", "zdelivery@gmail.com", "77981460176"))
         //Aqui estabelecemos o que esperamos de retorno
         every {contactRepository.findAll()} returns contactsInDatabase
-
         //Action
         //aqui chamamos exatamente o que estamos esperando
         val  contactsFound = contactService.listAllContacts()
-
         //Assert
         //Aqui validamos que foi encontrado algo, no caso os contatos mockados
         Assertions.assertNotNull(contactsFound)
@@ -88,8 +86,28 @@ class ContactServiceTest {
         val savedContact = contactService.addContact(contact)
 
         //Assert
-        Assertions.assertEquals(savedContact,contact)
+        assertEquals(savedContact,contact)
     }
+
+    @Test
+    fun `Add contacts return Exception Bad Request`(){
+        //Arrange
+        val contact = Contact(1L, "Israel", "isantos@gmail.com", "77981460173")
+        every { contactRepository.existsByNameAndEmail(contact.name, contact.email)} returns true
+        every {contactRepository.existsByName(contact.name)} returns true
+        every {contactRepository.existsByEmail(contact.email)} returns true
+        //Action
+
+        val thrown = assertThrows<ResponseStatusException> { contactService.addContact(contact)}
+        //Assert
+        assertEquals(thrown.message,"${HttpStatus.BAD_REQUEST} \"Existing name or email\"")
+
+    }
+
+
+
+
+
 
     @Test()
     fun showContact() {
@@ -98,7 +116,7 @@ class ContactServiceTest {
         every {contactRepository.findById(contact.id)}returns (Optional.of(contact))
         //Action
         val result = contactService.showContact(contact.id)
-
+        //Assert
         Assertions.assertEquals(result,contact)
     }
 
@@ -109,11 +127,13 @@ class ContactServiceTest {
         every{contactRepository.findById(contact.id)} returns(Optional.of(contact))
         every{contactRepository.delete(contact)} just runs
         //Action
-
         val thrown = assertThrows<ResponseStatusException> { contactService.deleteContact(contact.id)}
+        //Assert
         assertEquals(thrown.message,"${HttpStatus.OK} \"The contact was deleted\"")
     }
 
+
+     //\"The contact was deleted \"
     @Test
     fun alterContact(){
         //Arrange
@@ -124,14 +144,10 @@ class ContactServiceTest {
         every { contactRepository.save(any())} returns newContact
         //Action
         val result = contactService.alterContact(contact.id,newContact)
-
+        //Assert
         Assertions.assertNotEquals(result.name, "Israel Santos")
         Assertions.assertEquals(result.id,contact.id)
 
     }
-
-
-
-
 }
 
