@@ -9,7 +9,8 @@ import javax.persistence.EntityNotFoundException
 
 @Service
 class ContactService(private val repository: ContactRepository)  {
-     private fun verifyContact(contact: Contact){
+
+    fun verifyContact(contact: Contact){
       if(repository.existsByNameAndEmail(contact.name, contact.email) ||
           repository.existsByName(contact.name) ||
           repository.existsByEmail(contact.email)){
@@ -45,6 +46,6 @@ class ContactService(private val repository: ContactRepository)  {
         val contact = repository.findById(id).orElseThrow {EntityNotFoundException()}
         repository.delete(contact)
 
-        throw ResponseStatusException(HttpStatus.OK, "The contact was deleted")
+       throw ResponseStatusException(HttpStatus.OK, "The contact was deleted")
     }
 }

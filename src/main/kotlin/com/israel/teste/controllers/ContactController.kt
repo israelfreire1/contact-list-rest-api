@@ -3,6 +3,8 @@ package com.israel.teste.controllers
 import com.israel.teste.entities.Contact
 import com.israel.teste.repositories.ContactRepository
 import com.israel.teste.services.ContactService
+import org.apache.logging.log4j.LogManager
+import org.slf4j.Logger
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
@@ -14,10 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import javax.persistence.EntityNotFoundException
 
-
+@Suppress("UNREACHABLE_CODE")
 @RestController // create a controller
 @RequestMapping ("/contacts")//giving a request name for a resource
 class ContactController {
+
+    private val logger = LogManager.getLogger(ContactController::class.java)
+
     //Spring vai gerenciar as intâncias de repositories
     @Autowired
     lateinit var repository: ContactRepository
@@ -28,12 +33,16 @@ class ContactController {
     @GetMapping
     fun index(): List<Contact> {
         return service.listAllContacts()
+
     }
 
     //Do a POST type request at API endpoint
     @PostMapping
     fun create(@RequestBody contact: Contact ): Contact {
         return service.addContact(contact)
+
+        logger.info("m=Contact added by ContactService ${contact} $this")
+
     }
 
     //Do a GET type request at API endpoint
@@ -43,7 +52,6 @@ class ContactController {
         //return repository.findById(id).orElseThrow {EntityNotFoundException()}
         return service.showContact(id)
     }
-
 
     //Do a PUT type request at API endpoint
     @PutMapping("/{id}")

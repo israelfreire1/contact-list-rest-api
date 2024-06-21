@@ -10,5 +10,4 @@ interface ContactRepository: JpaRepository<Contact, Long> { //Create a repositor
     fun existsByNameAndEmail(name: String, email: String): Boolean
     fun existsByName(name: String): Boolean
     fun existsByEmail(email: String): Boolean
-
 }
