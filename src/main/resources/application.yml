@@ -1,4 +1,8 @@
 spring:
+    mvc:
+        pathmatch:
+            matching-strategy: ant_path_matcher
+
     jpa:
         database-platform: org.hibernate.dialect.H2Dialect
 
@@ -17,6 +21,8 @@ spring:
 
 
 
+
+
 logging:
     file.name: logs/logs-contact-list-application.log
 
@@ -24,9 +30,9 @@ logging:
         console: "%d{yyyy-mm-dd  HH:mm} %-5level  ---  [ %logger{40} ] : %msg%n"
 
     level:
-        root: TRACE
-        org.springframework.web: TRACE
-        org.hibernate: TRACE
+        root: INFO
+
+
 
 
 
