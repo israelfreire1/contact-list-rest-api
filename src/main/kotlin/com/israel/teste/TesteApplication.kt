@@ -14,10 +14,5 @@ class TesteApplication
 
 	fun main(args: Array<String>) {
 		runApplication<TesteApplication>(*args)
-
-		logger.error("Mensagem inicial")
-		logger.warn("Mensagem inicial")
-		logger.info("Mensagem inicial")
-		logger.debug("Mensagem inicial")
-		logger.trace("Mensagem inicial")
+		logger.info("Starting application with version [0.0.1-SNAPSHOT]")
 	}
