@@ -6,10 +6,12 @@ plugins {
 	id 'org.jetbrains.kotlin.jvm' version '1.6.21'
 	id 'org.jetbrains.kotlin.plugin.spring' version '1.6.21'
 	id 'org.jetbrains.kotlin.plugin.jpa' version '1.6.21'
+	//id "org.springdoc.openapi-gradle-plugin" version '2.6.6'
 }
 
 group = 'com.israel'
 version = '0.0.1-SNAPSHOT'
+
 
 java {
 	sourceCompatibility = '11'
@@ -26,6 +28,9 @@ configurations {
 
 repositories {
 	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
+
 }
 
 dependencies {
@@ -37,6 +42,8 @@ dependencies {
 	implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
 	implementation 'org.jetbrains.kotlin:kotlin-reflect'
 	implementation 'org.flywaydb:flyway-core'
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	//implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '2.6.6'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
@@ -44,6 +51,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.jetbrains.kotlin:kotlin-test'
 	testImplementation 'io.mockk:mockk:1.13.4'
+
 }
 
 tasks.withType(KotlinCompile) {

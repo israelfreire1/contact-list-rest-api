@@ -45,7 +45,5 @@ class ContactService(private val repository: ContactRepository)  {
     fun deleteContact(id: Long){
         val contact = repository.findById(id).orElseThrow {EntityNotFoundException()}
         repository.delete(contact)
-
-       throw ResponseStatusException(HttpStatus.OK, "The contact was deleted")
     }
 }
