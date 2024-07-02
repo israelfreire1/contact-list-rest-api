@@ -21,8 +21,6 @@ spring:
 
 
 
-
-
 logging:
     file.name: logs/logs-contact-list-application.log
 
