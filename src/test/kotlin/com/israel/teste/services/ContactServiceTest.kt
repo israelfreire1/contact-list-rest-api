@@ -74,7 +74,7 @@ class ContactServiceTest {
     }
 
     @Test
-    fun addContact(){
+    fun createContact(){
         //Arrange
         val contact = Contact(1L, "Israel", "isantos@gmail.com", "77981460173")
         every {contactRepository.existsByNameAndEmail(contact.name,contact.email)} returns false
@@ -83,7 +83,7 @@ class ContactServiceTest {
         every {contactRepository.save(any())} returns contact
 
         //Action
-        val savedContact = contactService.addContact(contact)
+        val savedContact = contactService.createContact(contact)
 
         //Assert
         assertEquals(savedContact,contact)
@@ -98,12 +98,11 @@ class ContactServiceTest {
         every {contactRepository.existsByEmail(contact.email)} returns true
         //Action
 
-        val thrown = assertThrows<ResponseStatusException> { contactService.addContact(contact)}
+        val thrown = assertThrows<ResponseStatusException> { contactService.createContact(contact)}
         //Assert
         assertEquals(thrown.message,"${HttpStatus.BAD_REQUEST} \"Existing name or email\"")
 
     }
-
 
     @Test()
     fun showContact() {
@@ -122,18 +121,18 @@ class ContactServiceTest {
         val contact = Contact(1L, "Israel Santos", "isantos@gmail.com", "77981460173")
         every{contactRepository.findById(contact.id)} returns(Optional.of(contact))
         every{contactRepository.delete(contact)} just runs
+
         //Action
         val thrown = assertThrows<ResponseStatusException> { contactService.deleteContact(contact.id)}
         //Assert
         assertEquals(thrown.message,"${HttpStatus.OK} \"The contact was deleted\"")
+
     }
 
-
-     //\"The contact was deleted \"
+    //\"The contact was deleted \"
     @Test
     fun updateContact(){
         //Arrange
-
         val contact = Contact(1, "Israel Santos", "isantos@gmail.com", "77981460173")
         val newContact = Contact(1, "Israel Santana", "isantos1@gmail.com", "77981460173")
         every { contactRepository.findById(contact.id)} returns(Optional.of(contact))
