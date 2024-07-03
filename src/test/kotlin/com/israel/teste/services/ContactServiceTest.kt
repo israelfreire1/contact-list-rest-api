@@ -105,10 +105,6 @@ class ContactServiceTest {
     }
 
 
-
-
-
-
     @Test()
     fun showContact() {
         //Arrange
@@ -135,7 +131,7 @@ class ContactServiceTest {
 
      //\"The contact was deleted \"
     @Test
-    fun alterContact(){
+    fun updateContact(){
         //Arrange
 
         val contact = Contact(1, "Israel Santos", "isantos@gmail.com", "77981460173")
@@ -143,7 +139,7 @@ class ContactServiceTest {
         every { contactRepository.findById(contact.id)} returns(Optional.of(contact))
         every { contactRepository.save(any())} returns newContact
         //Action
-        val result = contactService.alterContact(contact.id,newContact)
+        val result = contactService.updateContact(contact.id,newContact)
         //Assert
         Assertions.assertNotEquals(result.name, "Israel Santos")
         Assertions.assertEquals(result.id,contact.id)

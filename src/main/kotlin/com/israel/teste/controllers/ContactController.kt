@@ -16,10 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 
-
 @RestController // create a controller
 @RequestMapping ("/contacts")//giving a request name for a resource
-@Tag(name = "Contact list", description = "Api to store contacts")
 class ContactController {
 
     private val logger = LogManager.getLogger(ContactController::class.java)
@@ -41,7 +39,7 @@ class ContactController {
     @PostMapping
     fun create(@RequestBody contact: Contact ): Contact {
         logger.info("Waiting for POST request to /contacts with a CONTACT ins JSON body. Will return status 200 with ${contact} $this")
-        return service.addContact(contact)
+        return service.createContact(contact)
     }
 
     //Do a GET type request at API endpoint
@@ -57,7 +55,7 @@ class ContactController {
     @PutMapping("/{id}")
     fun update(@PathVariable("id") id: Long, @RequestBody newContact: Contact) : Contact{
         logger.info("Waiting for PUT request to /contacts/${id} with a new name, email e phone number in JSON body. Will return status 200 with contact saved in repository. ${this}")
-       return service.alterContact(id, newContact)
+       return service.updateContact(id, newContact)
     }
 
     //Do a DELETE type request at API endpoint
