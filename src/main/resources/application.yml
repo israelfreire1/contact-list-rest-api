@@ -1,4 +1,8 @@
 spring:
+    mvc:
+        pathmatch:
+            matching-strategy: ant_path_matcher
+
     jpa:
         database-platform: org.hibernate.dialect.H2Dialect
 
@@ -10,3 +14,24 @@ spring:
     h2:
         console: true
         path: "/h2-console"
+
+    output:
+    ansi:
+        enabled: DETECT
+
+
+
+logging:
+    file.name: logs/logs-contact-list-application.log
+
+    pattern:
+        console: "%d{yyyy-mm-dd  HH:mm} %-5level  ---  [ %logger{40} ] : %msg%n"
+
+    level:
+        root: INFO
+
+
+
+
+
+

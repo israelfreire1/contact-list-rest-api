@@ -9,7 +9,8 @@ import javax.persistence.EntityNotFoundException
 
 @Service
 class ContactService(private val repository: ContactRepository)  {
-     private fun verifyContact(contact: Contact){
+
+    fun verifyContact(contact: Contact){
       if(repository.existsByNameAndEmail(contact.name, contact.email) ||
           repository.existsByName(contact.name) ||
           repository.existsByEmail(contact.email)){
@@ -21,7 +22,7 @@ class ContactService(private val repository: ContactRepository)  {
         return repository.findAll()
     }
 
-    fun addContact(contact: Contact):Contact{
+    fun createContact(contact: Contact):Contact{
         verifyContact(contact)
         return repository.save(contact)
     }
@@ -31,7 +32,7 @@ class ContactService(private val repository: ContactRepository)  {
         return repository.findById(id).orElseThrow { EntityNotFoundException()}
     }
 
-    fun alterContact(id:Long, newContact: Contact): Contact{
+    fun updateContact(id:Long, newContact: Contact): Contact{
         val contact = repository.findById(id).orElseThrow {EntityNotFoundException()}
         contact.apply {
             this.name = newContact.name
@@ -46,5 +47,6 @@ class ContactService(private val repository: ContactRepository)  {
         repository.delete(contact)
 
         throw ResponseStatusException(HttpStatus.OK, "The contact was deleted")
+
     }
 }
