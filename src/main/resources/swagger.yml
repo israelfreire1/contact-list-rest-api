@@ -1,0 +1,8 @@
+springfox:
+    documentation:
+        swagger:
+          v3:
+            host: "http//localhost:8080/contacts"
+            basepath: "/v3/api-docs"
+            shemes:
+              - "https"
