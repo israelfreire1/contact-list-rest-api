@@ -15,18 +15,14 @@ class SwaggerConfig {
 
     @Bean
     fun api(): Docket {
-        return Docket(DocumentationType.SWAGGER_2).apiInfo(ApiInfo())
+        return Docket(DocumentationType.SWAGGER_2)
             .select()
             .apis(RequestHandlerSelectors.basePackage("com.israel.teste.controllers"))
             .build()
     }
 
- /*
-    @Bean
-    fun customAPI(): OpenAPI{
-        return  OpenAPI()
 
 
-  */
+
 }
 
